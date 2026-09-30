@@ -1,0 +1,44 @@
+[
+  {
+    "id": "character-cast-sheet-v1",
+    "file": "assets/characters/cast-sheet-v1.png",
+    "label": "Cast Sheet V1",
+    "role": "character design"
+  },
+  {
+    "id": "character-historian-v1",
+    "file": "assets/characters/historian-v1.png",
+    "label": "Historian V1",
+    "role": "character design"
+  },
+  {
+    "id": "character-narrator-v1",
+    "file": "assets/characters/narrator-v1.png",
+    "label": "Narrator V1",
+    "role": "character design"
+  },
+  {
+    "id": "character-skeptic-v1",
+    "file": "assets/characters/skeptic-v1.png",
+    "label": "Skeptic V1",
+    "role": "character design"
+  },
+  {
+    "id": "asset-generated-explain-git-save-lab",
+    "file": "assets/generated-explain/git-save-lab.png",
+    "label": "Git Save Lab",
+    "role": "generated explain visual asset"
+  },
+  {
+    "id": "asset-open-source-git-icon-white",
+    "file": "assets/open-source/git-icon-white.svg",
+    "label": "Git Icon White",
+    "role": "open source visual asset"
+  },
+  {
+    "id": "asset-open-source-git-logo",
+    "file": "assets/open-source/git-logo.svg",
+    "label": "Git Logo",
+    "role": "open source visual asset"
+  }
+]

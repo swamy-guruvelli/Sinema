@@ -1,0 +1,49 @@
+node_modules/
+out/*
+!out/eda-reels.mp4
+!out/mindkraft-explainer-reels.mp4
+.venv/
+.remote-control/
+remote/.env
+remote/
+REMOTE_DESK.md
+scripts/remote-server.mjs
+scripts/remote-worker.mjs
+scripts/cancel-remote-shutdown.cmd
+
+# Keep the two documented examples; other project drafts are local.
+videos/*
+!videos/eda/
+!videos/eda/**
+!videos/mindkraft-explainer/
+!videos/mindkraft-explainer/**
+
+# Keep the core app commands; optional experiments and project adapters are local.
+scripts/*
+!scripts/asset-agent.mjs
+!scripts/character-approval.mjs
+!scripts/check-studio.mjs
+!scripts/clean-cache.mjs
+!scripts/render.mjs
+!scripts/render-video-still.mjs
+!scripts/studio-api.mjs
+!scripts/validate-fresh.mjs
+!scripts/validate-video.mjs
+!scripts/web-server.mjs
+
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local browser traces and production scratch output.
+output/
+.playwright-cli/
+
+# Voice recordings stay local; keep only their attribution metadata.
+public/audio/voices/*
+!public/audio/voices/README.md
+!public/audio/voices/voice-profiles.json
+public/audio/videos/
+india.md
+logo.png
+video_scripts/Writing.txt

@@ -1,0 +1,733 @@
+{
+  "id": "mindkraft-tour",
+  "title": "A clearer way to move your job search forward",
+  "sourceUrl": "https://mindkraft.co.uk",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fps": 30,
+  "steps": [
+    {
+      "id": "hero-cta",
+      "action": "navigate",
+      "target": {
+        "kind": "role",
+        "role": "link",
+        "name": "Explore the tools",
+        "exact": true
+      },
+      "narration": "MindKraft brings roles, applications, and next steps into one calmer workspace.",
+      "caption": "Start with a clearer job search.",
+      "zoom": 1.12,
+      "minHoldMs": 5700,
+      "screenshotAfter": "render-assets/mindkraft-tour/step-01-after.png",
+      "targetRect": {
+        "x": 548.484375,
+        "y": 460.921875,
+        "width": 169.34375,
+        "height": 50.9375
+      },
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 957.09,
+          "y": 534.98
+        },
+        {
+          "timeMs": 58,
+          "x": 948.79,
+          "y": 529.22
+        },
+        {
+          "timeMs": 87,
+          "x": 935.79,
+          "y": 522.96
+        },
+        {
+          "timeMs": 116,
+          "x": 918.75,
+          "y": 516.43
+        },
+        {
+          "timeMs": 144,
+          "x": 898.35,
+          "y": 509.86
+        },
+        {
+          "timeMs": 173,
+          "x": 875.26,
+          "y": 503.46
+        },
+        {
+          "timeMs": 202,
+          "x": 850.16,
+          "y": 497.41
+        },
+        {
+          "timeMs": 231,
+          "x": 823.7,
+          "y": 491.89
+        },
+        {
+          "timeMs": 260,
+          "x": 796.58,
+          "y": 487.05
+        },
+        {
+          "timeMs": 289,
+          "x": 769.45,
+          "y": 483
+        },
+        {
+          "timeMs": 318,
+          "x": 743,
+          "y": 479.84
+        },
+        {
+          "timeMs": 347,
+          "x": 717.89,
+          "y": 477.64
+        },
+        {
+          "timeMs": 376,
+          "x": 694.8,
+          "y": 476.47
+        },
+        {
+          "timeMs": 404,
+          "x": 674.4,
+          "y": 476.35
+        },
+        {
+          "timeMs": 433,
+          "x": 657.37,
+          "y": 477.29
+        },
+        {
+          "timeMs": 462,
+          "x": 644.36,
+          "y": 479.29
+        },
+        {
+          "timeMs": 491,
+          "x": 636.07,
+          "y": 482.33
+        },
+        {
+          "timeMs": 520,
+          "x": 633.16,
+          "y": 486.39
+        }
+      ],
+      "startMs": 0,
+      "endMs": 5700
+    },
+    {
+      "id": "guided-journey",
+      "action": "navigate",
+      "target": {
+        "kind": "role",
+        "role": "heading",
+        "name": "Here’s how we help you move forward.",
+        "exact": true
+      },
+      "narration": "Tell MindKraft what you want, then focus on roles that fit.",
+      "caption": "Find roles that fit.",
+      "zoom": 1.14,
+      "minHoldMs": 4200,
+      "screenshotAfter": "render-assets/mindkraft-tour/step-02-after.png",
+      "targetRect": {
+        "x": 603.734375,
+        "y": 150.015625,
+        "width": 712.515625,
+        "height": 48.71875
+      },
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 633.16,
+          "y": 486.39
+        },
+        {
+          "timeMs": 29,
+          "x": 636.07,
+          "y": 479.07
+        },
+        {
+          "timeMs": 58,
+          "x": 644.36,
+          "y": 466.75
+        },
+        {
+          "timeMs": 87,
+          "x": 657.37,
+          "y": 450.2
+        },
+        {
+          "timeMs": 116,
+          "x": 674.4,
+          "y": 430.21
+        },
+        {
+          "timeMs": 144,
+          "x": 694.8,
+          "y": 407.51
+        },
+        {
+          "timeMs": 173,
+          "x": 717.89,
+          "y": 382.85
+        },
+        {
+          "timeMs": 202,
+          "x": 743,
+          "y": 356.96
+        },
+        {
+          "timeMs": 231,
+          "x": 769.45,
+          "y": 330.53
+        },
+        {
+          "timeMs": 260,
+          "x": 796.57,
+          "y": 304.24
+        },
+        {
+          "timeMs": 289,
+          "x": 823.7,
+          "y": 278.74
+        },
+        {
+          "timeMs": 318,
+          "x": 850.15,
+          "y": 254.67
+        },
+        {
+          "timeMs": 347,
+          "x": 875.26,
+          "y": 232.62
+        },
+        {
+          "timeMs": 376,
+          "x": 898.35,
+          "y": 213.2
+        },
+        {
+          "timeMs": 404,
+          "x": 918.75,
+          "y": 196.94
+        },
+        {
+          "timeMs": 433,
+          "x": 935.78,
+          "y": 184.41
+        },
+        {
+          "timeMs": 462,
+          "x": 948.78,
+          "y": 176.13
+        },
+        {
+          "timeMs": 491,
+          "x": 957.08,
+          "y": 172.62
+        },
+        {
+          "timeMs": 520,
+          "x": 959.99,
+          "y": 174.38
+        }
+      ],
+      "startMs": 5700,
+      "endMs": 9900
+    },
+    {
+      "id": "application-support",
+      "action": "navigate",
+      "target": {
+        "kind": "role",
+        "role": "link",
+        "name": "Create free account",
+        "exact": true
+      },
+      "narration": "Tailor each application with CV support from people in your field.",
+      "caption": "Strengthen each application.",
+      "zoom": 1.14,
+      "minHoldMs": 5200,
+      "screenshotAfter": "render-assets/mindkraft-tour/step-03-after.png",
+      "targetRect": {
+        "x": 375.390625,
+        "y": 977.484375,
+        "width": 560.8125,
+        "height": 50.9375
+      },
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 959.99,
+          "y": 174.38
+        },
+        {
+          "timeMs": 29,
+          "x": 957.28,
+          "y": 177.54
+        },
+        {
+          "timeMs": 58,
+          "x": 949.56,
+          "y": 194.47
+        },
+        {
+          "timeMs": 87,
+          "x": 937.46,
+          "y": 223.58
+        },
+        {
+          "timeMs": 116,
+          "x": 921.6,
+          "y": 263.3
+        },
+        {
+          "timeMs": 144,
+          "x": 902.62,
+          "y": 312.01
+        },
+        {
+          "timeMs": 173,
+          "x": 881.13,
+          "y": 368.12
+        },
+        {
+          "timeMs": 202,
+          "x": 857.76,
+          "y": 429.97
+        },
+        {
+          "timeMs": 231,
+          "x": 833.14,
+          "y": 495.93
+        },
+        {
+          "timeMs": 260,
+          "x": 807.89,
+          "y": 564.33
+        },
+        {
+          "timeMs": 289,
+          "x": 782.65,
+          "y": 633.46
+        },
+        {
+          "timeMs": 318,
+          "x": 758.03,
+          "y": 701.62
+        },
+        {
+          "timeMs": 347,
+          "x": 734.66,
+          "y": 767.06
+        },
+        {
+          "timeMs": 376,
+          "x": 713.17,
+          "y": 828.03
+        },
+        {
+          "timeMs": 404,
+          "x": 694.19,
+          "y": 882.74
+        },
+        {
+          "timeMs": 433,
+          "x": 678.33,
+          "y": 929.41
+        },
+        {
+          "timeMs": 462,
+          "x": 666.23,
+          "y": 966.21
+        },
+        {
+          "timeMs": 491,
+          "x": 658.51,
+          "y": 991.34
+        },
+        {
+          "timeMs": 520,
+          "x": 655.8,
+          "y": 1002.95
+        }
+      ],
+      "startMs": 9900,
+      "endMs": 15100
+    },
+    {
+      "id": "application-tracker",
+      "action": "navigate",
+      "target": {
+        "kind": "role",
+        "role": "heading",
+        "name": "See what’s happening without chasing",
+        "exact": true
+      },
+      "narration": "Track what you sent and see what happens next.",
+      "caption": "Keep every update together.",
+      "zoom": 1.16,
+      "minHoldMs": 4800,
+      "screenshotAfter": "render-assets/mindkraft-tour/step-04-after.png",
+      "targetRect": {
+        "x": 393,
+        "y": 188.453125,
+        "width": 334,
+        "height": 74.3125
+      },
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 655.8,
+          "y": 1002.95
+        },
+        {
+          "timeMs": 29,
+          "x": 654.94,
+          "y": 994.69
+        },
+        {
+          "timeMs": 58,
+          "x": 652.51,
+          "y": 973.67
+        },
+        {
+          "timeMs": 87,
+          "x": 648.7,
+          "y": 941.54
+        },
+        {
+          "timeMs": 116,
+          "x": 643.71,
+          "y": 899.93
+        },
+        {
+          "timeMs": 144,
+          "x": 637.73,
+          "y": 850.46
+        },
+        {
+          "timeMs": 173,
+          "x": 630.96,
+          "y": 794.78
+        },
+        {
+          "timeMs": 202,
+          "x": 623.6,
+          "y": 734.5
+        },
+        {
+          "timeMs": 231,
+          "x": 615.85,
+          "y": 671.25
+        },
+        {
+          "timeMs": 260,
+          "x": 607.9,
+          "y": 606.62
+        },
+        {
+          "timeMs": 289,
+          "x": 599.95,
+          "y": 542.22
+        },
+        {
+          "timeMs": 318,
+          "x": 592.2,
+          "y": 479.66
+        },
+        {
+          "timeMs": 347,
+          "x": 584.84,
+          "y": 420.51
+        },
+        {
+          "timeMs": 376,
+          "x": 578.07,
+          "y": 366.36
+        },
+        {
+          "timeMs": 404,
+          "x": 572.09,
+          "y": 318.78
+        },
+        {
+          "timeMs": 433,
+          "x": 567.1,
+          "y": 279.36
+        },
+        {
+          "timeMs": 462,
+          "x": 563.29,
+          "y": 249.65
+        },
+        {
+          "timeMs": 491,
+          "x": 560.85,
+          "y": 231.21
+        },
+        {
+          "timeMs": 520,
+          "x": 560,
+          "y": 225.61
+        }
+      ],
+      "startMs": 15100,
+      "endMs": 19900
+    },
+    {
+      "id": "community-tips",
+      "action": "navigate",
+      "target": {
+        "kind": "role",
+        "role": "link",
+        "name": "Read full story",
+        "exact": true
+      },
+      "narration": "Learn practical lessons from other job seekers in Tips.",
+      "caption": "Learn from real job seekers.",
+      "zoom": 1.12,
+      "minHoldMs": 4700,
+      "screenshotAfter": "render-assets/mindkraft-tour/step-05-after.png",
+      "targetRect": {
+        "x": 713.5625,
+        "y": 681.984375,
+        "width": 108.90625,
+        "height": 21
+      },
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 560,
+          "y": 225.61
+        },
+        {
+          "timeMs": 29,
+          "x": 561.85,
+          "y": 226.88
+        },
+        {
+          "timeMs": 58,
+          "x": 567.13,
+          "y": 235.93
+        },
+        {
+          "timeMs": 87,
+          "x": 575.41,
+          "y": 251.87
+        },
+        {
+          "timeMs": 116,
+          "x": 586.25,
+          "y": 273.83
+        },
+        {
+          "timeMs": 144,
+          "x": 599.23,
+          "y": 300.92
+        },
+        {
+          "timeMs": 173,
+          "x": 613.93,
+          "y": 332.24
+        },
+        {
+          "timeMs": 202,
+          "x": 629.91,
+          "y": 366.88
+        },
+        {
+          "timeMs": 231,
+          "x": 646.74,
+          "y": 403.91
+        },
+        {
+          "timeMs": 260,
+          "x": 664.01,
+          "y": 442.41
+        },
+        {
+          "timeMs": 289,
+          "x": 681.27,
+          "y": 481.4
+        },
+        {
+          "timeMs": 318,
+          "x": 698.11,
+          "y": 519.94
+        },
+        {
+          "timeMs": 347,
+          "x": 714.09,
+          "y": 557.03
+        },
+        {
+          "timeMs": 376,
+          "x": 728.78,
+          "y": 591.68
+        },
+        {
+          "timeMs": 404,
+          "x": 741.76,
+          "y": 622.87
+        },
+        {
+          "timeMs": 433,
+          "x": 752.61,
+          "y": 649.58
+        },
+        {
+          "timeMs": 462,
+          "x": 760.88,
+          "y": 670.78
+        },
+        {
+          "timeMs": 491,
+          "x": 766.16,
+          "y": 685.43
+        },
+        {
+          "timeMs": 520,
+          "x": 768.02,
+          "y": 692.48
+        }
+      ],
+      "startMs": 19900,
+      "endMs": 24600
+    },
+    {
+      "id": "next-step",
+      "action": "navigate",
+      "target": {
+        "kind": "role",
+        "role": "heading",
+        "name": "Why we built MindKraft",
+        "exact": true
+      },
+      "narration": "Choose your support, create a free account, and stay in control.",
+      "caption": "Choose your next step.",
+      "zoom": 1.12,
+      "minHoldMs": 5400,
+      "screenshotAfter": "render-assets/mindkraft-tour/step-06-after.png",
+      "targetRect": {
+        "x": 535.390625,
+        "y": 343.140625,
+        "width": 849.21875,
+        "height": 24
+      },
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 768.02,
+          "y": 692.48
+        },
+        {
+          "timeMs": 29,
+          "x": 769.73,
+          "y": 686.81
+        },
+        {
+          "timeMs": 58,
+          "x": 774.6,
+          "y": 675.66
+        },
+        {
+          "timeMs": 87,
+          "x": 782.24,
+          "y": 659.82
+        },
+        {
+          "timeMs": 116,
+          "x": 792.24,
+          "y": 640.04
+        },
+        {
+          "timeMs": 144,
+          "x": 804.23,
+          "y": 617.09
+        },
+        {
+          "timeMs": 173,
+          "x": 817.79,
+          "y": 591.72
+        },
+        {
+          "timeMs": 202,
+          "x": 832.54,
+          "y": 564.68
+        },
+        {
+          "timeMs": 231,
+          "x": 848.07,
+          "y": 536.68
+        },
+        {
+          "timeMs": 260,
+          "x": 864.01,
+          "y": 508.45
+        },
+        {
+          "timeMs": 289,
+          "x": 879.94,
+          "y": 480.69
+        },
+        {
+          "timeMs": 318,
+          "x": 895.48,
+          "y": 454.08
+        },
+        {
+          "timeMs": 347,
+          "x": 910.23,
+          "y": 429.3
+        },
+        {
+          "timeMs": 376,
+          "x": 923.79,
+          "y": 407
+        },
+        {
+          "timeMs": 404,
+          "x": 935.77,
+          "y": 387.84
+        },
+        {
+          "timeMs": 433,
+          "x": 945.78,
+          "y": 372.45
+        },
+        {
+          "timeMs": 462,
+          "x": 953.42,
+          "y": 361.46
+        },
+        {
+          "timeMs": 491,
+          "x": 958.29,
+          "y": 355.48
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 355.14
+        }
+      ],
+      "startMs": 24600,
+      "endMs": 30000
+    }
+  ],
+  "capturedAt": "2026-09-17T00:49:57.716Z"
+}

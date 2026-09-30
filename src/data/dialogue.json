@@ -1,0 +1,172 @@
+{
+  "01": [
+    {
+      "speaker": "narrator",
+      "text": "Thousands of years ago, farming communities grew into settlements.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "skeptic",
+      "text": "So somebody planted a crop and accidentally started a civilization?",
+      "pauseAfterMs": 320
+    },
+    {
+      "speaker": "narrator",
+      "text": "Pretty much. Then the Indian subcontinent started building cities."
+    }
+  ],
+  "02": [
+    {
+      "speaker": "historian",
+      "text": "The Harappans built planned cities, traded widely, and standardized weights.",
+      "pauseAfterMs": 260
+    },
+    {
+      "speaker": "skeptic",
+      "text": "Wait. This was four thousand years ago?",
+      "pauseAfterMs": 300
+    },
+    {
+      "speaker": "historian",
+      "text": "And they made a drainage system good enough to win an argument with a pyramid."
+    }
+  ],
+  "test": [
+    {
+      "speaker": "narrator",
+      "text": "Let's test a map that refuses to sit still.",
+      "pauseAfterMs": 220
+    },
+    {
+      "speaker": "historian",
+      "text": "Start with a route. Draw the line, then let the places pop in.",
+      "pauseAfterMs": 240
+    },
+    {
+      "speaker": "skeptic",
+      "text": "Pop in? Please don't make another PowerPoint.",
+      "pauseAfterMs": 240
+    },
+    {
+      "speaker": "historian",
+      "text": "Relax. The map wiggles, the ink breathes, and the traveler gets lost on purpose.",
+      "pauseAfterMs": 240
+    },
+    {
+      "speaker": "skeptic",
+      "text": "That is not a navigation system.",
+      "pauseAfterMs": 220
+    },
+    {
+      "speaker": "narrator",
+      "text": "It is a history video. A little chaos is a feature.",
+      "pauseAfterMs": 240
+    },
+    {
+      "speaker": "historian",
+      "text": "Watch the water run from the hills to the city.",
+      "pauseAfterMs": 220
+    },
+    {
+      "speaker": "skeptic",
+      "text": "Okay, that actually feels alive.",
+      "pauseAfterMs": 220
+    },
+    {
+      "speaker": "narrator",
+      "text": "Now we can tune the rhythm before building all thirty sections."
+    }
+  ],
+  "story-test": [
+    {
+      "speaker": "narrator",
+      "text": "Let's put the mystery on paper: why did this city care about water?",
+      "pauseAfterMs": 50
+    },
+    {
+      "speaker": "skeptic",
+      "text": "Because somebody got tired of mud?",
+      "pauseAfterMs": 50
+    },
+    {
+      "speaker": "historian",
+      "text": "Start with the map. The river feeds the city, and streets line up like a ruler.",
+      "pauseAfterMs": 50
+    },
+    {
+      "speaker": "narrator",
+      "text": "That square is a house, not a tiny palace.",
+      "pauseAfterMs": 50
+    },
+    {
+      "speaker": "skeptic",
+      "text": "Those lines under the street are drains?",
+      "pauseAfterMs": 50
+    },
+    {
+      "speaker": "historian",
+      "text": "Covered drains, wells, bathrooms. Four thousand years ago, infrastructure had a plan.",
+      "pauseAfterMs": 50
+    },
+    {
+      "speaker": "narrator",
+      "text": "When the water moves, the city works. When the paper moves -",
+      "pauseAfterMs": 0
+    },
+    {
+      "speaker": "skeptic",
+      "text": "We call it a documentary and pretend that was the plan."
+    }
+  ],
+  "editorial-pilot": [
+    {
+      "speaker": "narrator",
+      "text": "This ancient city had better urban planning than my apartment. That is not a compliment to my apartment.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "skeptic",
+      "text": "You are comparing a four-thousand-year-old city to your kitchen?",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "narrator",
+      "text": "I am comparing their streets to the way I park a bicycle. So yes, they are winning.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "skeptic",
+      "text": "They had a system, and we have a group chat called maintenance.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "narrator",
+      "text": "The Harappans standardized bricks, lined up streets, and built drains under the houses.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "skeptic",
+      "text": "This is suspiciously competent. Where is the ancient landlord?",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "narrator",
+      "text": "The difference is simple: their water had somewhere to go.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "skeptic",
+      "text": "Probably hiding behind the world's first excuse: the plumber is on the way.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "narrator",
+      "text": "Fine. Civilization wins. My sink still loses.",
+      "pauseAfterMs": 280
+    },
+    {
+      "speaker": "skeptic",
+      "text": "And that is how a drainage system becomes the most intimidating thing in history."
+    }
+  ]
+}

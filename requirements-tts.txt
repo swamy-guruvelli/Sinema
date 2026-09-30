@@ -1,0 +1,6 @@
+# Optional local conversational narration backend.
+# This revision exposes Chatterbox-Nano; the PyPI wheel may not expose it yet.
+chatterbox-tts @ git+https://github.com/resemble-ai/chatterbox.git@5de7a54aa4e5e2baadb0182dde554908b48b85c2
+torch==2.6.0
+torchaudio==2.6.0
+torchvision==0.21.0

@@ -1,0 +1,14 @@
+{
+  "narrator": {
+    "default": "assets/characters/narrator-v1.png",
+    "speaking": "draft-assets/characters/poses/narrator-explain-v1.png",
+    "pointing": "draft-assets/characters/poses/narrator-point-v1.png",
+    "listening": "assets/characters/narrator-v1.png"
+  },
+  "skeptic": {
+    "default": "assets/characters/skeptic-v1.png",
+    "speaking": "draft-assets/characters/poses/skeptic-question-v1.png",
+    "reacting": "draft-assets/characters/poses/skeptic-react-v1.png",
+    "listening": "assets/characters/skeptic-v1.png"
+  }
+}

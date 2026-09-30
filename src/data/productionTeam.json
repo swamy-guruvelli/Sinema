@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "project": "Samithgath video desk",
+  "tabs": [
+    {
+      "id": "director",
+      "label": "Director",
+      "stage": "01 / direction",
+      "color": "terracotta",
+      "prompt": "Act as the film director. Turn the brief into a clear emotional arc, decide what the viewer should feel, and protect the channel's visual rules.",
+      "inputs": ["brief", "audience", "style-system.json"],
+      "outputs": ["creative direction", "section beats", "approval notes"]
+    },
+    {
+      "id": "researcher",
+      "label": "Research",
+      "stage": "02 / facts",
+      "color": "blue",
+      "prompt": "Act as the research editor. Separate verified facts from interpretation, preserve useful sources, and flag claims the writer must not simplify.",
+      "inputs": ["topic", "sources", "open questions"],
+      "outputs": ["fact cards", "source notes", "risk flags"]
+    },
+    {
+      "id": "writer",
+      "label": "Story Writer",
+      "stage": "03 / script",
+      "color": "yellow",
+      "prompt": "Act as a movie-story writer. Write voiceover with setup, visual confirmation, character reaction, escalation, payoff, and a clean button.",
+      "inputs": ["creative direction", "fact cards", "voice roles"],
+      "outputs": ["script", "dialogue", "pause plan"]
+    },
+    {
+      "id": "storyboard",
+      "label": "Storyboard",
+      "stage": "04 / shots",
+      "color": "teal",
+      "prompt": "Act as the storyboard director. Give every sentence one primary visual action, assign a board, stage the speaker, and keep the safe margins clear.",
+      "inputs": ["script", "board catalog", "character registry"],
+      "outputs": ["scene beats", "speaker ownership", "video.json draft"]
+    },
+    {
+      "id": "assets",
+      "label": "Asset Lead",
+      "stage": "05 / cast",
+      "color": "green",
+      "prompt": "Act as the asset lead. Reuse approved characters and props first; request a new design only when the registry has no suitable asset.",
+      "inputs": ["video.json draft", "approved PNG registry", "style-system.json"],
+      "outputs": ["asset map", "new-design requests", "approval board"]
+    },
+    {
+      "id": "motion",
+      "label": "Motion",
+      "stage": "06 / rhythm",
+      "color": "saffron",
+      "prompt": "Act as the motion designer. Use the small canonical vocabulary: reveal, draw, pop, hold, emphasis, breathing, talking, and settle.",
+      "inputs": ["scene beats", "audio timing", "motion tokens"],
+      "outputs": ["motion cues", "camera notes", "collision checks"]
+    },
+    {
+      "id": "voice",
+      "label": "Voice Director",
+      "stage": "07 / sound",
+      "color": "terracotta",
+      "prompt": "Act as the voice director. Match age, energy, and role to the approved cast; preserve pauses and regenerate only the affected lines when possible.",
+      "inputs": ["dialogue", "voice profiles", "audio metadata"],
+      "outputs": ["voice map", "reference calibration", "line timings"]
+    },
+    {
+      "id": "remotion",
+      "label": "Remotion",
+      "stage": "08 / compile",
+      "color": "blue",
+      "prompt": "Act as the Remotion producer. Compile the validated intermediate representation without inventing React scene logic or unregistered assets.",
+      "inputs": ["video.json", "approved assets", "audio metadata"],
+      "outputs": ["composition props", "render command", "manifest"]
+    },
+    {
+      "id": "qa",
+      "label": "QA Producer",
+      "stage": "09 / review",
+      "color": "green",
+      "prompt": "Act as the final QA producer. Review audio-only, muted, safe margins, speaker ownership, motion timing, small-screen legibility, and deterministic rerender.",
+      "inputs": ["MP4", "video.json", "sampled frames", "audio metadata"],
+      "outputs": ["pass/fail report", "fix list", "release decision"]
+    }
+  ]
+}

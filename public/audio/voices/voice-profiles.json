@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "profiles": [
+    {
+      "id": "narrator",
+      "pitchRatio": 1.1,
+      "persona": "comic sci-fi narrator test voice",
+      "label": "Rick & Morty (M) / Chatterbox sample",
+      "referenceFile": "narrator.wav",
+      "sourceUrl": "https://storage.googleapis.com/chatterbox-demo-samples/prompts/male_rickmorty.mp3"
+    },
+    {
+      "id": "historian",
+      "pitchRatio": 1.04,
+      "persona": "comic family-man historian test voice",
+      "label": "Peter Griffin (M) / Chatterbox sample",
+      "referenceFile": "historian.wav",
+      "sourceUrl": "https://storage.googleapis.com/chatterbox-demo-samples/prompts/male_petergriffin.wav"
+    },
+    {
+      "id": "skeptic",
+      "pitchRatio": 1.16,
+      "persona": "child-genius skeptic test voice",
+      "label": "Stewie (M) / Chatterbox sample",
+      "referenceFile": "skeptic.wav",
+      "sourceUrl": "https://storage.googleapis.com/chatterbox-demo-samples/samples/chef_stewie.wav"
+    },
+    {
+      "id": "female1",
+      "pitchRatio": 1.04,
+      "persona": "female reference one",
+      "label": "Female 1 / Shadowheart sample",
+      "referenceFile": "female1.wav",
+      "sourceUrl": "https://storage.googleapis.com/chatterbox-demo-samples/samples/shadowheart.wav"
+    },
+    {
+      "id": "female2",
+      "pitchRatio": 1.04,
+      "persona": "female reference two",
+      "label": "Female 2 / Podcast sample",
+      "referenceFile": "female2.wav",
+      "sourceUrl": "https://storage.googleapis.com/chatterbox-demo-samples/prompts/female_random_podcast.wav"
+    }
+  ]
+}

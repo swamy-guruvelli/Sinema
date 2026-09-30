@@ -1,0 +1,776 @@
+{
+  "id": "mindkraft-explainer",
+  "title": "MindKraft: from job-search chaos to a clearer next step",
+  "sourceUrl": "https://mindkraft.co.uk",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fps": 30,
+  "steps": [
+    {
+      "id": "problem-and-promise",
+      "action": "navigate",
+      "narration": "The job search can become a full-time job of its own. MindKraft starts by putting the important pieces in one place.",
+      "caption": "From scattered tasks to one clearer workspace.",
+      "zoom": 1.1,
+      "minHoldMs": 6500,
+      "assertText": "We support",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-01-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 0,
+      "endMs": 6500
+    },
+    {
+      "id": "roles-that-fit",
+      "action": "navigate",
+      "narration": "First, you explain what you are looking for. Then the search can focus on roles that make sense for your experience and plans.",
+      "caption": "Start with roles worth your time.",
+      "zoom": 1.12,
+      "minHoldMs": 6500,
+      "assertText": "Tell us what you’re looking for",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-02-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 6500,
+      "endMs": 13000
+    },
+    {
+      "id": "application-support",
+      "action": "navigate",
+      "narration": "Finding a role is only the beginning. MindKraft helps you strengthen the CV and answers for the application in front of you.",
+      "caption": "Make each application more relevant.",
+      "zoom": 1.12,
+      "minHoldMs": 6500,
+      "assertText": "See what’s happening without chasing",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-03-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 13000,
+      "endMs": 19500
+    },
+    {
+      "id": "review-before-submit",
+      "action": "navigate",
+      "narration": "The useful distinction is control: you review the details, approve the final version, and decide when an application is ready.",
+      "caption": "Support helps. You decide.",
+      "zoom": 1.1,
+      "minHoldMs": 6500,
+      "assertText": "MindKraft",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-04-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 19500,
+      "endMs": 26000
+    },
+    {
+      "id": "application-tracker",
+      "action": "navigate",
+      "narration": "After you apply, the tracker keeps the role, status, updates, and next action together instead of hiding them across tabs and inboxes.",
+      "caption": "Know what happened and what comes next.",
+      "zoom": 1.14,
+      "minHoldMs": 7000,
+      "assertText": "Every submitted application in one place",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-05-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 26000,
+      "endMs": 33000
+    },
+    {
+      "id": "community-tips",
+      "action": "navigate",
+      "narration": "When you need a nudge, community tips add practical lessons from people who are going through the same process.",
+      "caption": "Useful advice, right where the search happens.",
+      "zoom": 1.1,
+      "minHoldMs": 6500,
+      "assertText": "Tips",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-06-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 33000,
+      "endMs": 39500
+    },
+    {
+      "id": "clear-next-step",
+      "action": "navigate",
+      "narration": "That is the MindKraft promise: less searching in circles, more focused progress, with one clear next step each morning.",
+      "caption": "Wake up to progress, not procrastination.",
+      "zoom": 1.1,
+      "minHoldMs": 7000,
+      "assertText": "MindKraft",
+      "screenshotAfter": "render-assets/mindkraft-explainer/step-07-after.png",
+      "cursorPath": [
+        {
+          "timeMs": 0,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 29,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 58,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 87,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 116,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 144,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 173,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 202,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 231,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 260,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 289,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 318,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 347,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 376,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 404,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 433,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 462,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 491,
+          "x": 960,
+          "y": 540
+        },
+        {
+          "timeMs": 520,
+          "x": 960,
+          "y": 540
+        }
+      ],
+      "startMs": 39500,
+      "endMs": 46500
+    }
+  ],
+  "capturedAt": "2026-09-24T21:08:11.504Z"
+}

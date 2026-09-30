@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "videoId": "gitbasics",
+  "assets": [
+    {
+      "id": "git-logo",
+      "videos": [
+        "gitbasics"
+      ],
+      "file": "git-logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Git-logo.svg",
+      "license": "CC BY 3.0",
+      "author": "Jason Long",
+      "notes": "Git logo; trademark terms still apply.",
+      "localFile": "assets/open-source/git-logo.svg",
+      "sha256": "5009760ad7a4258ebbe8befd39f89e23e9d5ed9cb8c83783acb3a0cef93cf331",
+      "contentType": "image/svg+xml",
+      "fetchedAt": "2026-09-17T22:47:02.951Z"
+    },
+    {
+      "id": "git-icon-white",
+      "videos": [
+        "gitbasics"
+      ],
+      "file": "git-icon-white.svg",
+      "url": "https://git-scm.com/images/logos/downloads/Git-Icon-White.svg",
+      "sourceUrl": "https://git-scm.com/community/logos",
+      "license": "CC BY 3.0",
+      "author": "Jason Long",
+      "notes": "White Git logomark for dark boards; trademark terms still apply.",
+      "localFile": "assets/open-source/git-icon-white.svg",
+      "sha256": "4b62d3bdfe913e88de9bd9d25cf466af9d4ac759dfecc8a17d86016b35b97a6e",
+      "contentType": "image/svg+xml",
+      "fetchedAt": "2026-09-17T22:47:03.234Z"
+    }
+  ]
+}

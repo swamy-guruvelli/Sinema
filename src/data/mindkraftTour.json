@@ -1,0 +1,105 @@
+{
+  "id": "mindkraft-tour",
+  "title": "A clearer way to move your job search forward",
+  "baseUrl": "https://mindkraft.co.uk",
+  "viewport": {"width": 1920, "height": 1080},
+  "steps": [
+    {
+      "id": "hero-cta",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/",
+      "target": {"kind": "role", "role": "link", "name": "Explore the tools", "exact": true},
+      "narration": "MindKraft brings roles, applications, and next steps into one calmer workspace.",
+      "caption": "Start with a clearer job search.",
+      "zoom": 1.12,
+      "minHoldMs": 5700
+    },
+    {
+      "id": "guided-journey",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/#job-search-journey",
+      "target": {"kind": "role", "role": "heading", "name": "Here’s how we help you move forward.", "exact": true},
+      "narration": "Tell MindKraft what you want, then focus on roles that fit.",
+      "caption": "Find roles that fit.",
+      "zoom": 1.14,
+      "minHoldMs": 4200
+    },
+    {
+      "id": "application-support",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/pricing",
+      "target": {"kind": "role", "role": "link", "name": "Create free account", "exact": true},
+      "narration": "Tailor each application with CV support from people in your field.",
+      "caption": "Strengthen each application.",
+      "zoom": 1.14,
+      "minHoldMs": 5200
+    },
+    {
+      "id": "application-tracker",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/#applications",
+      "target": {"kind": "role", "role": "heading", "name": "See what’s happening without chasing", "exact": true},
+      "narration": "Track what you sent and see what happens next.",
+      "caption": "Keep every update together.",
+      "zoom": 1.16,
+      "minHoldMs": 4800
+    },
+    {
+      "id": "community-tips",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/feed",
+      "target": {"kind": "role", "role": "link", "name": "Read full story", "exact": true},
+      "narration": "Learn practical lessons from other job seekers in Tips.",
+      "caption": "Learn from real job seekers.",
+      "zoom": 1.12,
+      "minHoldMs": 4700
+    },
+    {
+      "id": "next-step",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/about",
+      "target": {"kind": "role", "role": "heading", "name": "Why we built MindKraft", "exact": true},
+      "narration": "Choose your support, create a free account, and stay in control.",
+      "caption": "Choose your next step.",
+      "zoom": 1.12,
+      "minHoldMs": 5400
+    }
+  ],
+  "dialogue": [
+    {
+      "stepId": "hero-cta",
+      "speaker": "narrator",
+      "text": "MindKraft brings roles, applications, and next steps into one calmer workspace.",
+      "pauseAfterMs": 250
+    },
+    {
+      "stepId": "guided-journey",
+      "speaker": "narrator",
+      "text": "Tell MindKraft what you want, then focus on roles that fit.",
+      "pauseAfterMs": 250
+    },
+    {
+      "stepId": "application-support",
+      "speaker": "narrator",
+      "text": "Tailor each application with CV support from people in your field.",
+      "pauseAfterMs": 250
+    },
+    {
+      "stepId": "application-tracker",
+      "speaker": "narrator",
+      "text": "Track what you sent and see what happens next.",
+      "pauseAfterMs": 250
+    },
+    {
+      "stepId": "community-tips",
+      "speaker": "narrator",
+      "text": "Learn practical lessons from other job seekers in Tips.",
+      "pauseAfterMs": 250
+    },
+    {
+      "stepId": "next-step",
+      "speaker": "narrator",
+      "text": "Choose your support, create a free account, and stay in control."
+    }
+  ]
+}

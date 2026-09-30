@@ -1,0 +1,67 @@
+{
+  "sampleRate": 24000,
+  "assembledFile": "audio/mindkraft-tour/mindkraft-tour.wav",
+  "backgroundFile": "audio/mindkraft-tour/bgm.wav",
+  "lines": [
+    {
+      "stepId": "hero-cta",
+      "speaker": "narrator",
+      "text": "MindKraft brings roles, applications, and next steps into one calmer workspace.",
+      "pauseAfterMs": 250,
+      "file": "audio/mindkraft-tour/line-01.wav",
+      "durationMs": 5400,
+      "startMs": 0,
+      "endMs": 5400
+    },
+    {
+      "stepId": "guided-journey",
+      "speaker": "narrator",
+      "text": "Tell MindKraft what you want, then focus on roles that fit.",
+      "pauseAfterMs": 250,
+      "file": "audio/mindkraft-tour/line-02.wav",
+      "durationMs": 3840,
+      "startMs": 5700,
+      "endMs": 9540
+    },
+    {
+      "stepId": "application-support",
+      "speaker": "narrator",
+      "text": "Tailor each application with CV support from people in your field.",
+      "pauseAfterMs": 250,
+      "file": "audio/mindkraft-tour/line-03.wav",
+      "durationMs": 3600,
+      "startMs": 9900,
+      "endMs": 13500
+    },
+    {
+      "stepId": "application-tracker",
+      "speaker": "narrator",
+      "text": "Track what you sent and see what happens next.",
+      "pauseAfterMs": 250,
+      "file": "audio/mindkraft-tour/line-04.wav",
+      "durationMs": 2600,
+      "startMs": 15100,
+      "endMs": 17700
+    },
+    {
+      "stepId": "community-tips",
+      "speaker": "narrator",
+      "text": "Learn practical lessons from other job seekers in Tips.",
+      "pauseAfterMs": 250,
+      "file": "audio/mindkraft-tour/line-05.wav",
+      "durationMs": 3160,
+      "startMs": 19900,
+      "endMs": 23060
+    },
+    {
+      "stepId": "next-step",
+      "speaker": "narrator",
+      "text": "Choose your support, create a free account, and stay in control.",
+      "pauseAfterMs": 0,
+      "file": "audio/mindkraft-tour/line-06.wav",
+      "durationMs": 3960,
+      "startMs": 24600,
+      "endMs": 28560
+    }
+  ]
+}

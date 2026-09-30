@@ -1,0 +1,78 @@
+{
+  "id": "mindkraft-explainer",
+  "title": "MindKraft: from job-search chaos to a clearer next step",
+  "baseUrl": "https://mindkraft.co.uk",
+  "viewport": {"width": 1920, "height": 1080},
+  "steps": [
+    {
+      "id": "problem-and-promise",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/",
+      "narration": "The job search can become a full-time job of its own. MindKraft starts by putting the important pieces in one place.",
+      "caption": "From scattered tasks to one clearer workspace.",
+      "zoom": 1.1,
+      "minHoldMs": 6500,
+      "assertText": "We support"
+    },
+    {
+      "id": "roles-that-fit",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/#job-search-journey",
+      "narration": "First, you explain what you are looking for. Then the search can focus on roles that make sense for your experience and plans.",
+      "caption": "Start with roles worth your time.",
+      "zoom": 1.12,
+      "minHoldMs": 6500,
+      "assertText": "Tell us what you’re looking for"
+    },
+    {
+      "id": "application-support",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/#applications",
+      "narration": "Finding a role is only the beginning. MindKraft helps you strengthen the CV and answers for the application in front of you.",
+      "caption": "Make each application more relevant.",
+      "zoom": 1.12,
+      "minHoldMs": 6500,
+      "assertText": "See what’s happening without chasing"
+    },
+    {
+      "id": "review-before-submit",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/pricing",
+      "narration": "The useful distinction is control: you review the details, approve the final version, and decide when an application is ready.",
+      "caption": "Support helps. You decide.",
+      "zoom": 1.1,
+      "minHoldMs": 6500,
+      "assertText": "MindKraft"
+    },
+    {
+      "id": "application-tracker",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/#applications",
+      "narration": "After you apply, the tracker keeps the role, status, updates, and next action together instead of hiding them across tabs and inboxes.",
+      "caption": "Know what happened and what comes next.",
+      "zoom": 1.14,
+      "minHoldMs": 7000,
+      "assertText": "Every submitted application in one place"
+    },
+    {
+      "id": "community-tips",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/feed",
+      "narration": "When you need a nudge, community tips add practical lessons from people who are going through the same process.",
+      "caption": "Useful advice, right where the search happens.",
+      "zoom": 1.1,
+      "minHoldMs": 6500,
+      "assertText": "Tips"
+    },
+    {
+      "id": "clear-next-step",
+      "action": "navigate",
+      "value": "{{TARGET_URL}}/about",
+      "narration": "That is the MindKraft promise: less searching in circles, more focused progress, with one clear next step each morning.",
+      "caption": "Wake up to progress, not procrastination.",
+      "zoom": 1.1,
+      "minHoldMs": 7000,
+      "assertText": "MindKraft"
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112c3b">
+  <meta name="description" content="A local Chatterbox script editor for sampling and generating voice-led audiobooks.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2365dfa0'/%3E%3C/svg%3E">
+  <title>Chatterbox Studio — Local audiobook maker</title>
+  <style>
+    :root { color-scheme:dark; --night:#071e1a; --deep:#0c2d25; --glass:rgba(255,255,255,.09); --glass-strong:rgba(255,255,255,.15); --line:rgba(211,255,232,.2); --white:#f3fff9; --muted:#a8c9ba; --green:#a8f5c6; --green-strong:#65dfa0; --danger:#ffb5aa; }
+    * { box-sizing:border-box; }
+    body { min-width:320px; min-height:100vh; margin:0; color:var(--white); background:radial-gradient(circle at 8% 0%,#1c6a4b 0%,transparent 32rem),radial-gradient(circle at 100% 10%,#174d3a 0%,transparent 28rem),linear-gradient(145deg,var(--night),var(--deep)); font:16px/1.5 "Segoe UI",system-ui,sans-serif; }
+    button,input,select,textarea { font:inherit; }
+    button { cursor:pointer; }
+    button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible { outline:0; border-color:var(--green); box-shadow:0 0 0 4px rgba(168,245,198,.2); }
+    .shell { width:min(1040px,calc(100% - 32px)); margin:0 auto; padding:26px 0 56px; }
+    header { display:grid; grid-template-columns:1fr auto; gap:10px 24px; align-items:end; padding:8px 0 26px; }
+    .brandline { display:flex; align-items:center; gap:10px; }
+    .brand-dot { width:10px; height:10px; border-radius:50%; background:var(--green); box-shadow:0 0 22px rgba(168,245,198,.9); }
+    .eyebrow { margin:0; color:var(--green); font-size:11px; font-weight:850; letter-spacing:.2em; text-transform:uppercase; }
+    h1 { grid-column:1 / -1; max-width:760px; margin:0; font-size:clamp(2.35rem,6vw,5rem); line-height:.95; letter-spacing:-.06em; }
+    .dek { grid-column:1 / -1; max-width:560px; margin:0; color:var(--muted); }
+    main { padding-top:8px; }
+    .panel { padding:clamp(18px,3vw,30px); border:1px solid var(--line); border-radius:30px; background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.06)); box-shadow:0 24px 80px rgba(0,0,0,.2); backdrop-filter:blur(24px); }
+    .panel-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; }
+    h2 { margin:0; font-size:1.25rem; letter-spacing:-.025em; }
+    .hint { color:var(--muted); font-size:.84rem; }
+    label { display:grid; gap:7px; color:var(--muted); font-size:.74rem; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+    input,select,textarea { width:100%; color:var(--white); background:rgba(2,20,15,.28); border:1px solid var(--line); border-radius:16px; padding:11px 13px; outline:0; }
+    input::placeholder,textarea::placeholder { color:#82a99a; }
+    input[type="file"] { padding:8px; }
+    textarea { min-height:120px; resize:vertical; line-height:1.5; text-transform:none; letter-spacing:0; font-weight:400; }
+    .book-meta { display:grid; grid-template-columns:minmax(0,1fr) 150px 190px; gap:12px; margin-bottom:14px; }
+    .import-tools { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(170px,.8fr) minmax(170px,.8fr); gap:12px; margin-bottom:10px; }
+    .import-hint { grid-column:1 / -1; margin:0 0 8px; }
+    code { color:var(--green); font-size:.92em; }
+    .speaker-map { display:none; gap:10px; margin:18px 0; padding:14px; border:1px solid var(--line); border-radius:22px; background:rgba(0,20,13,.2); }
+    .speaker-map.ready { display:grid; }
+    .speaker-map-header { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+    .speaker-map h3 { margin:0; font-size:.98rem; }
+    .speaker-map-header p { margin:0; color:var(--muted); font-size:.78rem; }
+    .speaker-row { display:grid; grid-template-columns:minmax(0,1fr) 180px; gap:12px; align-items:center; }
+    .speaker-name { overflow:hidden; color:var(--white); font-size:.92rem; font-weight:750; text-overflow:ellipsis; white-space:nowrap; }
+    .line-list { display:grid; gap:12px; }
+    .line-card { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:12px; align-items:start; padding:14px 16px; border:1px solid var(--line); border-radius:24px 24px 24px 10px; background:rgba(2,25,18,.3); }
+    .line-card:nth-child(even) { margin-left:32px; border-radius:24px 24px 10px 24px; background:rgba(168,245,198,.09); }
+    .line-number { display:grid; place-items:center; width:30px; height:30px; border:1px solid rgba(168,245,198,.35); border-radius:50%; color:var(--green); font-size:.78rem; font-weight:900; }
+    .bubble-content { min-width:0; }
+    .bubble-meta { display:flex; align-items:center; gap:9px; margin:2px 0 5px; }
+    .bubble-speaker { color:var(--green); font-size:.84rem; font-weight:850; }
+    .bubble-voice { color:var(--muted); font-size:.75rem; }
+    .bubble-text { margin:0; color:var(--white); white-space:pre-wrap; overflow-wrap:anywhere; }
+    .bubble-foot { display:flex; gap:8px; margin-top:8px; color:var(--muted); font-size:.74rem; }
+    .edit-line,.primary,.secondary { border:1px solid var(--line); border-radius:999px; padding:10px 16px; font-weight:850; transition:transform .18s ease,background .18s ease,box-shadow .18s ease; }
+    .edit-line:hover,.primary:hover,.secondary:hover { transform:translateY(-1px); }
+    .edit-line,.secondary { color:var(--white); background:rgba(255,255,255,.13); box-shadow:inset 0 1px rgba(255,255,255,.2); }
+    .primary { color:#062217; border-color:rgba(205,255,224,.72); background:linear-gradient(135deg,rgba(221,255,234,.96),rgba(101,223,160,.9)); box-shadow:0 10px 28px rgba(74,223,142,.2),inset 0 1px rgba(255,255,255,.8); }
+    .actions { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:20px; }
+    .button-row { display:flex; gap:10px; flex-wrap:wrap; }
+    button:disabled { cursor:wait; opacity:.55; }
+    .status { min-height:24px; margin:14px 0 0; color:var(--muted); font-size:.9rem; }
+    .status[data-kind="error"] { color:var(--danger); }
+    .status[data-kind="success"] { color:var(--green); }
+    .result { display:none; gap:12px; margin-top:18px; padding-top:20px; border-top:1px solid var(--line); }
+    .result.ready { display:grid; }
+    audio { width:100%; }
+    .download { color:var(--green); font-weight:850; }
+    dialog { width:min(520px,calc(100% - 28px)); padding:0; color:var(--white); border:0; background:transparent; }
+    dialog::backdrop { background:rgba(1,12,9,.72); backdrop-filter:blur(8px); }
+    .modal-card { display:grid; gap:18px; padding:24px; border:1px solid rgba(211,255,232,.3); border-radius:28px; background:linear-gradient(145deg,rgba(24,70,53,.96),rgba(4,30,22,.96)); box-shadow:0 30px 100px rgba(0,0,0,.48); }
+    .modal-head { display:flex; align-items:start; justify-content:space-between; gap:16px; }
+    .modal-head h2 { margin-top:3px; }
+    .modal-close { width:38px; height:38px; padding:0; border:1px solid var(--line); border-radius:50%; color:var(--white); background:rgba(255,255,255,.1); font-size:1.4rem; line-height:1; }
+    .edit-grid { display:grid; grid-template-columns:minmax(0,1fr) 160px; gap:12px; }
+    .edit-grid .wide { grid-column:1 / -1; }
+    .modal-actions { display:flex; justify-content:space-between; gap:10px; }
+    .danger { color:#ffd8d0; border-color:rgba(255,181,170,.35); background:rgba(255,181,170,.1); }
+    .progress-card { gap:16px; text-align:center; }
+    .progress-card p { margin:0; color:var(--muted); }
+    .progress-track { width:100%; height:12px; overflow:hidden; border:1px solid var(--line); border-radius:999px; background:rgba(0,20,13,.5); }
+    progress { width:100%; height:100%; border:0; appearance:none; background:transparent; }
+    progress::-webkit-progress-bar { background:transparent; }
+    progress::-webkit-progress-value { border-radius:999px; background:linear-gradient(90deg,var(--green),var(--green-strong)); }
+    progress::-moz-progress-bar { border-radius:999px; background:var(--green-strong); }
+    .progress-readout { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .progress-readout strong { color:var(--green); font-size:1.4rem; }
+    @media (max-width:760px) {
+      .shell { width:min(100% - 20px,620px); padding-top:18px; }
+      header { display:block; padding-bottom:20px; }
+      h1 { margin-top:14px; }
+      .dek { margin-top:14px; }
+      .book-meta,.import-tools { grid-template-columns:1fr; }
+      .speaker-row,.edit-grid { grid-template-columns:1fr; gap:8px; }
+      .edit-grid .wide { grid-column:auto; }
+      .line-card,.line-card:nth-child(even) { margin-left:0; }
+      .line-card { grid-template-columns:auto minmax(0,1fr); }
+      .line-card .edit-line { grid-column:2; justify-self:start; }
+      .actions { align-items:stretch; flex-direction:column; }
+      .actions .button-row { width:100%; }
+      .actions button { flex:1; }
+      .modal-actions { align-items:stretch; flex-direction:column-reverse; }
+    }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition-duration:.01ms !important; animation-duration:.01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brandline"><span class="brand-dot" aria-hidden="true"></span><p class="eyebrow">Chatterbox Studio</p><span class="hint" id="voice-count">Loading voices&hellip;</span></div>
+      <h1>Turn a script into a voice-led story.</h1>
+      <p class="dek">Edit the conversation as bubbles, sample a few lines, then convert the full audiobook when it sounds right.</p>
+    </header>
+    <main>
+      <section class="panel" aria-labelledby="editor-heading">
+        <div class="panel-header"><h2 id="editor-heading">Your conversation</h2><span class="hint">Local only</span></div>
+        <form id="book-form">
+          <div class="book-meta">
+            <label>Book title<input id="title" name="title" required maxlength="160" value="Untitled audiobook"></label>
+            <label>Model<select id="model" name="model"><option value="nano">Nano</option><option value="turbo">Turbo</option></select></label>
+            <label>Convert<select id="sample-size" name="sampleSize"><option value="all">Full script</option><option value="1">Sample 1 line</option><option value="3">Sample 3 lines</option><option value="5">Sample 5 lines</option><option value="10">Sample 10 lines</option></select></label>
+          </div>
+          <div class="import-tools">
+            <label>Import script<input id="import-file" type="file" accept=".txt,.md,text/plain"></label>
+            <label>Format<select id="import-format"><option value="auto">Auto-detect</option><option value="labelled">Speaker labels</option><option value="prose">Quoted prose</option></select></label>
+            <label>Reactions<select id="reaction-mode"><option value="narrator">Narrate reactions</option><option value="skip">Skip reactions</option></select></label>
+            <p class="hint import-hint">Works with <code>NAME:</code>, <code>Person 1 said:</code>, and <code>&ldquo;Hello,&rdquo; said Person 1</code> formats.</p>
+          </div>
+          <div class="speaker-map" id="speaker-map" aria-live="polite"></div>
+          <div id="line-list" class="line-list" aria-live="polite"></div>
+          <div class="actions">
+            <div class="button-row"><button class="secondary" type="button" id="add-line">Add line</button></div>
+            <div class="button-row"><button class="primary" type="submit" id="generate">Convert full audiobook</button></div>
+          </div>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="result" id="result" aria-labelledby="result-heading">
+          <h2 id="result-heading">Your audiobook is ready</h2>
+          <audio id="audio" controls></audio>
+          <a class="download" id="download" download="audiobook.wav">Download audiobook.wav</a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <dialog id="edit-modal" aria-labelledby="edit-heading">
+    <form class="modal-card" id="edit-form">
+      <div class="modal-head">
+        <div><p class="eyebrow">Line editor</p><h2 id="edit-heading">Edit narration</h2></div>
+        <button class="modal-close" type="button" id="close-edit" aria-label="Close line editor">&times;</button>
+      </div>
+      <div class="edit-grid">
+        <label>Speaker<input id="edit-character" readonly></label>
+        <label>Voice<select id="edit-voice"></select></label>
+        <label class="wide">Narration<textarea id="edit-text" required maxlength="5000"></textarea></label>
+        <label>Pause after (ms)<input id="edit-pause" type="number" min="0" max="10000" step="50"></label>
+      </div>
+      <div class="modal-actions">
+        <button class="secondary danger" type="button" id="remove-line">Remove line</button>
+        <button class="primary" type="submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog id="progress-modal" aria-labelledby="progress-heading" aria-describedby="progress-label">
+    <div class="modal-card progress-card">
+      <div><p class="eyebrow">Chatterbox is working</p><h2 id="progress-heading">Converting your audiobook</h2></div>
+      <p id="progress-label" role="status" aria-live="polite">Preparing conversion&hellip;</p>
+      <div class="progress-track"><progress id="progress-bar" max="100" value="0">0%</progress></div>
+      <div class="progress-readout"><span class="hint">The popup will close when the WAV is ready.</span><strong id="progress-percent">0%</strong></div>
+    </div>
+  </dialog>
+  <script>
+    const state = {voices: [], speakerMap: {}, showSpeakerMap: false, editingIndex: null, lines: [{character: 'Narrator', characterKey: 'narrator', speaker: 'narrator', text: 'Welcome to your audiobook.', pauseAfterMs: 300}, {character: 'Narrator', characterKey: 'narrator', speaker: 'narrator', text: 'Add another line, choose another voice, and generate when you are ready.', pauseAfterMs: 300}]};
+    const list = document.getElementById('line-list');
+    const speakerMap = document.getElementById('speaker-map');
+    const status = document.getElementById('status');
+    const generate = document.getElementById('generate');
+    const result = document.getElementById('result');
+    const resultHeading = document.getElementById('result-heading');
+    const audio = document.getElementById('audio');
+    const download = document.getElementById('download');
+    const sampleSize = document.getElementById('sample-size');
+    const editModal = document.getElementById('edit-modal');
+    const editForm = document.getElementById('edit-form');
+    const editCharacter = document.getElementById('edit-character');
+    const editVoice = document.getElementById('edit-voice');
+    const editText = document.getElementById('edit-text');
+    const editPause = document.getElementById('edit-pause');
+    const progressModal = document.getElementById('progress-modal');
+    const progressBar = document.getElementById('progress-bar');
+    const progressLabel = document.getElementById('progress-label');
+    const progressPercent = document.getElementById('progress-percent');
+
+    const setStatus = (message, kind = '') => { status.textContent = message; status.dataset.kind = kind; };
+    const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'narrator';
+    const cleanDirection = (value) => value.replace(/^\s*\[/, '').replace(/\]\s*$/, '').replace(/\s+/g, ' ').trim();
+    const cleanDialogue = (value) => value.trim().replace(/^[“"]/, '').replace(/[”"]$/, '').trim();
+    const reservedNarrativeWords = new Set(['a', 'an', 'he', 'it', 'she', 'someone', 'somebody', 'that', 'the', 'they', 'this', 'we']);
+    const looksLikeSpeakerLabel = (value) => {
+      const label = value.trim();
+      const first = label.split(/\s+/)[0].toLowerCase();
+      if (!label || label.length > 42 || reservedNarrativeWords.has(first)) return false;
+      if (label.toLowerCase() === 'narrator') return true;
+      return /^[A-Z0-9 _-]+$/.test(label) || /\d/.test(label) || /^[A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,2}$/.test(label);
+    };
+
+    function parseSpeakerLine(line, format) {
+      const said = line.match(/^([A-Za-z][A-Za-z0-9 _-]{0,50})\s+(?:said|says|asked|replied|answered|whispered|shouted|muttered|cried|yelled|continued)\s*:?\s*(.+)$/i);
+      if (said && looksLikeSpeakerLabel(said[1])) return {character: said[1].trim(), text: cleanDialogue(said[2])};
+      const quoted = line.match(/^[“"](.+?)[”"]\s*,?\s*(?:said|says|asked|replied|answered|whispered|shouted|muttered|cried|yelled|continued)\s+([A-Za-z][A-Za-z0-9 _-]{0,50})\.?$/i);
+      if (quoted) return {character: quoted[2].trim(), text: cleanDialogue(quoted[1])};
+      const labels = line.match(/^([^:\n]{1,60}):\s*(.+)$/);
+      if (labels && looksLikeSpeakerLabel(labels[1]) && !/^https?$/i.test(labels[1].trim())) return {character: labels[1].trim(), text: cleanDialogue(labels[2])};
+      if (format === 'prose') return null;
+      return null;
+    }
+
+    function parseScript(source, format, reactionMode) {
+      const parsed = [];
+      const mode = format === 'auto' ? 'labelled' : format;
+      let pending = null;
+      let direction = [];
+      let inDirection = false;
+      const addLine = (character, text, pauseAfterMs) => {
+        const clean = text.replace(/\s+/g, ' ').trim();
+        if (!clean) return;
+        const characterName = character || 'Narrator';
+        parsed.push({character: characterName, characterKey: slug(characterName), speaker: 'narrator', text: clean, pauseAfterMs});
+      };
+      const flushPending = () => {
+        if (pending) addLine(pending.character, pending.text, 250);
+        pending = null;
+      };
+      const flushDirection = () => {
+        const text = cleanDirection(direction.join(' '));
+        if (reactionMode === 'narrator') addLine('Narrator', text, 350);
+        direction = [];
+        inDirection = false;
+      };
+
+      source.replace(/\r\n?/g, '\n').split('\n').forEach((raw) => {
+        const line = raw.trim();
+        if (inDirection) {
+          direction.push(line);
+          if (line.includes(']')) flushDirection();
+          return;
+        }
+        if (line.startsWith('[')) {
+          flushPending();
+          direction = [line];
+          if (line.includes(']')) flushDirection(); else inDirection = true;
+          return;
+        }
+        if (!line) {
+          flushPending();
+          return;
+        }
+        const speakerLine = parseSpeakerLine(line, mode);
+        if (speakerLine) {
+          flushPending();
+          pending = speakerLine;
+          return;
+        }
+        if (pending) {
+          pending.text += ` ${line}`;
+        } else if (reactionMode === 'narrator') {
+          addLine('Narrator', line, 350);
+        }
+      });
+      if (inDirection) flushDirection();
+      flushPending();
+      return parsed;
+    }
+
+    function defaultVoiceFor(characterKey) {
+      const exact = state.voices.find((voice) => voice.id.toLowerCase() === characterKey.toLowerCase());
+      return exact?.id || state.voices.find((voice) => voice.id === 'narrator')?.id || state.voices[0]?.id || 'narrator';
+    }
+
+    function applyVoiceMap() {
+      state.lines.forEach((line) => {
+        const key = line.characterKey || slug(line.character || 'Narrator');
+        line.characterKey = key;
+        line.character = line.character || 'Narrator';
+        state.speakerMap[key] = state.speakerMap[key] || defaultVoiceFor(key);
+        line.speaker = state.speakerMap[key];
+      });
+    }
+
+    function renderSpeakerMap() {
+      speakerMap.replaceChildren();
+      const characters = [...new Map(state.lines.map((line) => [line.characterKey || slug(line.character || 'Narrator'), line.character || 'Narrator'])).entries()];
+      speakerMap.classList.toggle('ready', state.showSpeakerMap && characters.length > 0);
+      if (!state.showSpeakerMap || !characters.length) return;
+      const header = document.createElement('div'); header.className = 'speaker-map-header';
+      const title = document.createElement('h3'); title.textContent = 'Detected speakers';
+      const note = document.createElement('p'); note.textContent = 'Map each character to a reference voice.';
+      header.append(title, note); speakerMap.append(header);
+      characters.forEach(([key, character]) => {
+        const row = document.createElement('div'); row.className = 'speaker-row';
+        const name = document.createElement('span'); name.className = 'speaker-name'; name.textContent = character;
+        const voice = document.createElement('select'); voice.setAttribute('aria-label', `Voice for ${character}`);
+        state.voices.forEach((item) => { const option = document.createElement('option'); option.value = item.id; option.textContent = item.label; option.selected = item.id === state.speakerMap[key]; voice.append(option); });
+        voice.addEventListener('change', () => { state.speakerMap[key] = voice.value; state.lines.forEach((line) => { if ((line.characterKey || slug(line.character || 'Narrator')) === key) line.speaker = voice.value; }); renderLines(); });
+        row.append(name, voice); speakerMap.append(row);
+      });
+    }
+
+    function openEditor(index) {
+      const line = state.lines[index];
+      if (!line) return;
+      state.editingIndex = index;
+      editCharacter.value = line.character || 'Narrator';
+      editText.value = line.text;
+      editPause.value = String(line.pauseAfterMs);
+      editVoice.replaceChildren();
+      state.voices.forEach((item) => { const option = document.createElement('option'); option.value = item.id; option.textContent = item.label; option.selected = item.id === line.speaker; editVoice.append(option); });
+      if (!editModal.open) editModal.showModal();
+      window.setTimeout(() => editText.focus(), 0);
+    }
+
+    function renderLines() {
+      list.replaceChildren();
+      state.lines.forEach((line, index) => {
+        const card = document.createElement('article'); card.className = 'line-card';
+        const number = document.createElement('span'); number.className = 'line-number'; number.textContent = String(index + 1); number.setAttribute('aria-label', `Line ${index + 1}`);
+        const content = document.createElement('div'); content.className = 'bubble-content';
+        const meta = document.createElement('div'); meta.className = 'bubble-meta';
+        const character = document.createElement('span'); character.className = 'bubble-speaker'; character.textContent = line.character || 'Narrator';
+        const voice = document.createElement('span'); voice.className = 'bubble-voice'; voice.textContent = state.voices.find((item) => item.id === line.speaker)?.label || line.speaker;
+        const text = document.createElement('p'); text.className = 'bubble-text'; text.textContent = line.text;
+        const foot = document.createElement('div'); foot.className = 'bubble-foot'; foot.textContent = `${line.pauseAfterMs} ms pause`;
+        meta.append(character, voice); content.append(meta, text, foot);
+        const edit = document.createElement('button'); edit.className = 'edit-line'; edit.type = 'button'; edit.textContent = 'Edit'; edit.setAttribute('aria-label', `Edit line ${index + 1}`); edit.addEventListener('click', () => openEditor(index));
+        card.append(number, content, edit); list.append(card);
+      });
+    }
+
+    async function loadVoices() {
+      const response = await fetch('/api/voices');
+      const data = await response.json();
+      state.voices = data.voices || [];
+      document.getElementById('voice-count').textContent = `${state.voices.length} reference${state.voices.length === 1 ? '' : 's'}`;
+      if (state.voices.length) applyVoiceMap();
+      renderSpeakerMap();
+      renderLines();
+      if (!state.voices.length) setStatus('No WAV voice references found in public/audio/voices.', 'error');
+    }
+
+    function setProgress(progress = {}) {
+      const percent = Math.max(0, Math.min(100, Number(progress.percent) || 0));
+      progressBar.value = percent;
+      progressPercent.textContent = `${percent}%`;
+      progressLabel.textContent = progress.label || 'Preparing conversion…';
+    }
+
+    function showProgress() {
+      setProgress({percent: 0, label: 'Preparing conversion…'});
+      if (!progressModal.open) progressModal.showModal();
+    }
+
+    function closeProgress() {
+      if (progressModal.open) progressModal.close();
+    }
+
+    async function poll(id) {
+      const response = await fetch(`/api/jobs/${id}`); const job = await response.json();
+      setProgress(job.progress);
+      if (job.status === 'complete') { const url = `${job.audioUrl}?t=${Date.now()}`; audio.src = url; download.href = url; result.classList.add('ready'); generate.disabled = false; closeProgress(); setStatus('Conversion complete.', 'success'); return; }
+      if (job.status === 'failed') { generate.disabled = false; closeProgress(); setStatus(job.error || 'Conversion failed. Check the terminal running Studio.', 'error'); return; }
+      window.setTimeout(() => poll(id), 900);
+    }
+
+    document.getElementById('add-line').addEventListener('click', () => {
+      const character = 'Narrator';
+      state.lines.push({character, characterKey: 'narrator', speaker: defaultVoiceFor('narrator'), text: '', pauseAfterMs: 300});
+      renderSpeakerMap(); renderLines(); openEditor(state.lines.length - 1);
+    });
+    document.getElementById('close-edit').addEventListener('click', () => editModal.close());
+    editForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const line = state.lines[state.editingIndex];
+      if (!line || !editText.value.trim()) { editText.focus(); return; }
+      line.speaker = editVoice.value;
+      line.text = editText.value.trim();
+      line.pauseAfterMs = Number(editPause.value || 0);
+      renderLines();
+      editModal.close();
+      setStatus('Line updated.', 'success');
+    });
+    document.getElementById('remove-line').addEventListener('click', () => {
+      if (state.lines.length <= 1) { setStatus('Keep at least one narration line.', 'error'); return; }
+      state.lines.splice(state.editingIndex, 1);
+      renderSpeakerMap(); renderLines(); editModal.close();
+      setStatus('Line removed.', 'success');
+    });
+    progressModal.addEventListener('cancel', (event) => { if (generate.disabled) event.preventDefault(); });
+    sampleSize.addEventListener('change', () => { generate.textContent = sampleSize.value === 'all' ? 'Convert full audiobook' : `Convert ${sampleSize.value}-line sample`; });
+    document.getElementById('import-file').addEventListener('change', async (event) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      try {
+        const parsed = parseScript(await file.text(), document.getElementById('import-format').value, document.getElementById('reaction-mode').value);
+        if (!parsed.length) throw new Error('No dialogue or reactions were found in that file.');
+        state.lines = parsed;
+        state.speakerMap = {};
+        state.showSpeakerMap = true;
+        applyVoiceMap();
+        document.getElementById('title').value = file.name.replace(/\.(?:txt|md)$/i, '').replace(/[-_]+/g, ' ').trim() || 'Imported audiobook';
+        renderSpeakerMap(); renderLines();
+        setStatus(`Imported ${parsed.length} lines from ${file.name}.`, 'success');
+      } catch (error) {
+        setStatus(`Import failed: ${error.message}`, 'error');
+      } finally {
+        event.target.value = '';
+      }
+    });
+    document.getElementById('book-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const requestedSize = sampleSize.value === 'all' ? state.lines.length : Number(sampleSize.value);
+      const lines = state.lines.slice(0, requestedSize);
+      if (!lines.length) { setStatus('Add at least one narration line first.', 'error'); return; }
+      const isSample = sampleSize.value !== 'all';
+      resultHeading.textContent = isSample ? 'Your sample is ready' : 'Your audiobook is ready';
+      download.textContent = isSample ? 'Download sample.wav' : 'Download audiobook.wav';
+      download.download = isSample ? 'sample.wav' : 'audiobook.wav';
+      generate.disabled = true; result.classList.remove('ready'); showProgress(); setStatus('Queuing conversion…');
+      try {
+        const response = await fetch('/api/generate', {method: 'POST', headers: {'content-type': 'application/json'}, body: JSON.stringify({title: document.getElementById('title').value, model: document.getElementById('model').value, lines})});
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Could not create the job');
+        poll(data.id);
+      } catch (error) {
+        generate.disabled = false; closeProgress(); setStatus(error.message, 'error');
+      }
+    });
+    loadVoices().catch((error) => setStatus(`Studio could not load voices: ${error.message}`, 'error'));
+  </script>
+</body>
+</html>

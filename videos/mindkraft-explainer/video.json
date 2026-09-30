@@ -1,0 +1,402 @@
+{
+  "version": 1,
+  "videoId": "mindkraft-explainer",
+  "productionType": "walkthrough",
+  "format": "youtube-9x16",
+  "fps": 30,
+  "styleVersion": "samithgath-fresh-1",
+  "scenes": [
+    {
+      "id": "mindkraft-problem",
+      "title": "THE JOB SEARCH LOOP",
+      "narration": "A job search sounds simple, but it quickly becomes five separate jobs: find roles, check sponsorship, compare your skills, rewrite your resume, and track every application. The traditional way spreads that work across job boards, documents, inboxes, and spreadsheets. MindKraft brings the journey together.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 589,
+      "visual": {
+        "kind": "browser",
+        "label": "MindKraft landing page",
+        "browser": {
+          "path": "mindkraft.co.uk",
+          "variant": "mindkraft-story",
+          "flow": "comparison",
+          "guideLabel": "THE PROBLEM",
+          "excerpt": "Roles, applications, and next steps in one place.",
+          "analogy": "one clearer workspace",
+          "action": "start with the promise"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "SEARCH · APPLY · WAIT"
+        },
+        {
+          "frame": 110,
+          "action": "draw",
+          "text": "ONE WORKSPACE"
+        },
+        {
+          "frame": 220,
+          "action": "emphasis",
+          "text": "A CLEARER START"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "A job search sounds simple, but it quickly becomes five separate jobs: find roles, check sponsorship, compare your skills, rewrite your resume, and track every application.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 322
+        },
+        {
+          "speaker": "skeptic",
+          "text": "The traditional way spreads that work across job boards, documents, inboxes, and spreadsheets. MindKraft brings the journey together.",
+          "pauseAfterMs": 140,
+          "startFrame": 329,
+          "endFrame": 576
+        }
+      ]
+    },
+    {
+      "id": "mindkraft-matching",
+      "title": "START THE DAY WITH A BRIEF",
+      "narration": "Each morning, MindKraft can send a simple job brief with new opportunities and sponsorship information. It can also show why a role matches your skills and experience, so you spend time on roles that make sense.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 381,
+      "visual": {
+        "kind": "browser",
+        "label": "MindKraft guided journey",
+        "browser": {
+          "path": "mindkraft.co.uk/#job-search-journey",
+          "variant": "mindkraft-story",
+          "flow": "morning",
+          "guideLabel": "STEP ONE",
+          "excerpt": "Tell us what you are looking for.",
+          "analogy": "roles worth your time",
+          "action": "follow the journey"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "TELL IT WHAT YOU WANT"
+        },
+        {
+          "frame": 75,
+          "action": "draw",
+          "text": "FILTER THE NOISE"
+        },
+        {
+          "frame": 176,
+          "action": "emphasis",
+          "text": "FIND A BETTER FIT"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "Each morning, MindKraft can send a simple job brief with new opportunities and sponsorship information.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 168
+        },
+        {
+          "speaker": "skeptic",
+          "text": "It can also show why a role matches your skills and experience, so you spend time on roles that make sense.",
+          "pauseAfterMs": 140,
+          "startFrame": 176,
+          "endFrame": 368
+        }
+      ]
+    },
+    {
+      "id": "mindkraft-application",
+      "title": "TAILOR FROM THE ROLE",
+      "narration": "When you find a role, you do not have to start your resume from scratch. MindKraft helps tailor the resume and application for that job, and the browser extension can assist while you explore.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 346,
+      "visual": {
+        "kind": "browser",
+        "label": "MindKraft application tracking",
+        "browser": {
+          "path": "mindkraft.co.uk/#applications",
+          "variant": "mindkraft-story",
+          "flow": "tailor",
+          "guideLabel": "STEP TWO",
+          "excerpt": "Support for stronger applications.",
+          "analogy": "tailored, not generic",
+          "action": "show the work after matching"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "A ROLE IS ONLY THE START"
+        },
+        {
+          "frame": 70,
+          "action": "draw",
+          "text": "TAILOR THE DETAILS"
+        },
+        {
+          "frame": 131,
+          "action": "emphasis",
+          "text": "MAKE IT RELEVANT"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "When you find a role, you do not have to start your resume from scratch.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 124
+        },
+        {
+          "speaker": "skeptic",
+          "text": "MindKraft helps tailor the resume and application for that job, and the browser extension can assist while you explore.",
+          "pauseAfterMs": 140,
+          "startFrame": 131,
+          "endFrame": 333
+        }
+      ]
+    },
+    {
+      "id": "mindkraft-control",
+      "title": "REVIEW BEFORE YOU SEND",
+      "narration": "The work still stays in your hands. You review the suggestions, check the details, and decide whether the application is ready to submit.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 244,
+      "visual": {
+        "kind": "browser",
+        "label": "MindKraft support",
+        "browser": {
+          "path": "mindkraft.co.uk/pricing",
+          "variant": "mindkraft-story",
+          "flow": "review",
+          "guideLabel": "STEP THREE",
+          "excerpt": "You review and approve what you use.",
+          "analogy": "help without handover",
+          "action": "make the control visible"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "SUPPORT, NOT AUTOPILOT"
+        },
+        {
+          "frame": 64,
+          "action": "draw",
+          "text": "CHECK THE DETAILS"
+        },
+        {
+          "frame": 170,
+          "action": "emphasis",
+          "text": "YOU CHOOSE"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "The work still stays in your hands.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 64
+        },
+        {
+          "speaker": "skeptic",
+          "text": "You review the suggestions, check the details, and decide whether the application is ready to submit.",
+          "pauseAfterMs": 140,
+          "startFrame": 71,
+          "endFrame": 231
+        }
+      ]
+    },
+    {
+      "id": "mindkraft-tracking",
+      "title": "SEE WHAT HAPPENS NEXT",
+      "narration": "After you apply, the role, status, messages, and next action stay together. Instead of chasing tabs and inboxes, you can see what changed and what to do next.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 318,
+      "visual": {
+        "kind": "browser",
+        "label": "MindKraft application tracker",
+        "browser": {
+          "path": "mindkraft.co.uk/#applications",
+          "variant": "mindkraft-story",
+          "flow": "tracking",
+          "guideLabel": "STEP FOUR",
+          "excerpt": "Every submitted application in one place.",
+          "analogy": "less chasing, more clarity",
+          "action": "hold on the visible result"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "ROLE · STATUS · NEXT STEP"
+        },
+        {
+          "frame": 90,
+          "action": "draw",
+          "text": "UPDATES TOGETHER"
+        },
+        {
+          "frame": 153,
+          "action": "emphasis",
+          "text": "NO TAB HUNTING"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "After you apply, the role, status, messages, and next action stay together.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 146
+        },
+        {
+          "speaker": "skeptic",
+          "text": "Instead of chasing tabs and inboxes, you can see what changed and what to do next.",
+          "pauseAfterMs": 140,
+          "startFrame": 153,
+          "endFrame": 303
+        }
+      ]
+    },
+    {
+      "id": "mindkraft-tips",
+      "title": "LEARN AS YOU GO",
+      "narration": "When you get stuck, practical tips can help with interviews, applications, and better job-search habits. So the process keeps teaching you something, instead of starting over every morning.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 345,
+      "visual": {
+        "kind": "browser",
+        "label": "MindKraft community tips",
+        "browser": {
+          "path": "mindkraft.co.uk/feed",
+          "variant": "mindkraft-story",
+          "flow": "tips",
+          "guideLabel": "STEP FIVE",
+          "excerpt": "What other job seekers have learnt.",
+          "analogy": "a search you can learn from",
+          "action": "add practical guidance"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "INTERVIEW NOTES"
+        },
+        {
+          "frame": 110,
+          "action": "draw",
+          "text": "APPLICATION LESSONS"
+        },
+        {
+          "frame": 206,
+          "action": "emphasis",
+          "text": "KEEP GOING"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "When you get stuck, practical tips can help with interviews, applications, and better job-search habits.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 198
+        },
+        {
+          "speaker": "skeptic",
+          "text": "So the process keeps teaching you something, instead of starting over every morning.",
+          "pauseAfterMs": 140,
+          "startFrame": 206,
+          "endFrame": 332
+        }
+      ]
+    },
+    {
+      "id": "mindkraft-next-step",
+      "title": "A CLEARER NEXT MOVE",
+      "narration": "MindKraft turns a scattered job search into one clearer routine: discover, match, tailor, review, and follow up. And these core tools are available for free, so you can focus on your next move without adding another cost.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "still",
+      "durationInFrames": 429,
+      "visual": {
+        "kind": "browser",
+        "label": "Why MindKraft exists",
+        "browser": {
+          "path": "mindkraft.co.uk/about",
+          "variant": "mindkraft-story",
+          "flow": "payoff",
+          "guideLabel": "THE PAYOFF",
+          "excerpt": "Wake up to progress, not procrastination.",
+          "analogy": "a clearer next step",
+          "action": "end on the reason it exists"
+        }
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "LESS SEARCHING IN CIRCLES"
+        },
+        {
+          "frame": 150,
+          "action": "draw",
+          "text": "MORE FOCUSED PROGRESS"
+        },
+        {
+          "frame": 230,
+          "action": "emphasis",
+          "text": "WAKE UP TO PROGRESS"
+        }
+      ],
+      "characters": [],
+      "dialogue": [
+        {
+          "speaker": "skeptic",
+          "text": "MindKraft turns a scattered job search into one clearer routine: discover, match, tailor, review, and follow up.",
+          "pauseAfterMs": 140,
+          "startFrame": 0,
+          "endFrame": 222
+        },
+        {
+          "speaker": "skeptic",
+          "text": "And these core tools are available for free, so you can focus on your next move without adding another cost.",
+          "pauseAfterMs": 140,
+          "startFrame": 230,
+          "endFrame": 409
+        }
+      ]
+    }
+  ]
+}

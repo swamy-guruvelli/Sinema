@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "colors": {
+    "ink": "#16212b",
+    "mutedInk": "#5a6570",
+    "paper": "#f5eedc",
+    "cream": "#fffaf0",
+    "saffron": "#ed8b35",
+    "terracotta": "#c9573e",
+    "teal": "#157f80",
+    "blue": "#2e6d9f",
+    "green": "#5f8750",
+    "yellow": "#f1c453",
+    "white": "#fffdf7"
+  },
+  "typography": {
+    "body": "Comic Sans MS, Segoe Print, Trebuchet MS, cursive",
+    "utility": "Trebuchet MS, Arial, sans-serif"
+  },
+  "stroke": {
+    "width": 3,
+    "linecap": "round",
+    "linejoin": "round"
+  },
+  "motion": {
+    "revealFrames": 18,
+    "anticipationFrames": 6,
+    "settleFrames": 10,
+    "sceneTransitionFrames": 12,
+    "breathingFrames": 42,
+    "talkingFrames": 7,
+    "breathingAmplitudePx": 2,
+    "talkingAmplitudePx": 3,
+    "emphasisScale": 0.035,
+    "emphasisRotationDeg": 1.2
+  },
+  "safeMargin": 0.1,
+  "boards": {
+    "paper": {
+      "background": "#fffaf0",
+      "ink": "#16212b",
+      "muted": "#5a6570",
+      "panel": "rgba(255,253,247,0.78)",
+      "accent": "#c9573e",
+      "texture": "paper"
+    },
+    "editorial": {
+      "background": "#19232c",
+      "ink": "#fffdf7",
+      "muted": "rgba(255,250,240,0.72)",
+      "panel": "rgba(12,19,25,0.58)",
+      "accent": "#f1c453",
+      "texture": "editorial"
+    },
+    "lesson": {
+      "background": "#f5eedc",
+      "ink": "#16212b",
+      "muted": "#5a6570",
+      "panel": "#fffdf7",
+      "accent": "#157f80",
+      "texture": "paper"
+    }
+  }
+}

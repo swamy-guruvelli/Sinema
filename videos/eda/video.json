@@ -1,0 +1,624 @@
+{
+  "version": 1,
+  "videoId": "eda",
+  "title": "Event-driven architecture, explained simply",
+  "productionType": "education",
+  "format": "youtube-9x16",
+  "fps": 30,
+  "styleVersion": "samithgath-fresh-1",
+  "scenes": [
+    {
+      "id": "eda-hook",
+      "title": "RICK VS STEWIE: EVENTS",
+      "narration": "Event-driven architecture lets one thing happen once, then lets many services react without calling each other directly.",
+      "board": "paper",
+      "layout": "stage",
+      "motion": "reveal",
+      "durationInFrames": 360,
+      "visual": {
+        "kind": "flow",
+        "label": "ONE EVENT, MANY REACTIONS",
+        "nodes": [
+          "APP",
+          "EVENT",
+          "BROKER",
+          "SERVICES"
+        ],
+        "caption": "One message can wake up many services."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "ONE THING HAPPENS",
+          "speaker": "rick"
+        },
+        {
+          "frame": 55,
+          "action": "draw",
+          "text": "SEND ONE EVENT",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 110,
+          "action": "emphasis",
+          "text": "MANY SERVICES REACT",
+          "speaker": "rick"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "rick",
+          "text": "Stewie, a user places one order. Six services need to know.",
+          "startFrame": 0,
+          "endFrame": 136,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "So the checkout page calls six services and prays?",
+          "startFrame": 140,
+          "endFrame": 234,
+          "pauseAfterMs": 150
+        },
+        {
+          "speaker": "rick",
+          "text": "No. It sends one event. The architecture does the gossiping.",
+          "startFrame": 238,
+          "endFrame": 356,
+          "pauseAfterMs": 0
+        }
+      ]
+    },
+    {
+      "id": "eda-event",
+      "title": "AN EVENT IS A RECEIPT",
+      "narration": "An event is a small record saying that something already happened, such as OrderPlaced.",
+      "board": "lesson",
+      "layout": "stage",
+      "motion": "reveal",
+      "durationInFrames": 341,
+      "visual": {
+        "kind": "codebase",
+        "label": "SOMETHING HAPPENED",
+        "files": [
+          "event.type",
+          "event.data",
+          "event.time"
+        ],
+        "code": [
+          "type: 'OrderPlaced'",
+          "orderId: 42",
+          "happenedAt: now"
+        ],
+        "caption": "An event is a receipt, not a command."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "ORDER PLACED",
+          "speaker": "rick"
+        },
+        {
+          "frame": 55,
+          "action": "draw",
+          "text": "RECORD WHAT HAPPENED",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 110,
+          "action": "emphasis",
+          "text": "OTHERS CAN REACT",
+          "speaker": "rick"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "rick",
+          "text": "An event is just a receipt: OrderPlaced, order forty-two.",
+          "startFrame": 0,
+          "endFrame": 107,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "So it says what happened, not what another service must do?",
+          "startFrame": 111,
+          "endFrame": 227,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "rick",
+          "text": "Exactly. A receipt is useful to anyone who needs it.",
+          "startFrame": 230,
+          "endFrame": 338,
+          "pauseAfterMs": 0
+        }
+      ]
+    },
+    {
+      "id": "eda-broker",
+      "title": "THE BROKER HOLDS THE NOTE",
+      "narration": "A message broker stores the event briefly and delivers it to interested consumers.",
+      "board": "editorial",
+      "layout": "stage",
+      "motion": "reveal",
+      "durationInFrames": 312,
+      "visual": {
+        "kind": "pipeline",
+        "label": "THE EVENT DELIVERY LINE",
+        "nodes": [
+          "ORDER SERVICE",
+          "MESSAGE BROKER",
+          "EMAIL + INVENTORY"
+        ],
+        "caption": "The broker keeps the note moving, even if a listener is busy."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "PRODUCER WRITES",
+          "speaker": "rick"
+        },
+        {
+          "frame": 55,
+          "action": "draw",
+          "text": "BROKER HOLDS",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 110,
+          "action": "emphasis",
+          "text": "CONSUMERS READ",
+          "speaker": "rick"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "rick",
+          "text": "The order service drops the event into a message broker.",
+          "startFrame": 0,
+          "endFrame": 95,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "A mailbox for computers. Finally, something with manners.",
+          "startFrame": 99,
+          "endFrame": 209,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "rick",
+          "text": "Email and inventory can read the same note independently.",
+          "startFrame": 212,
+          "endFrame": 309,
+          "pauseAfterMs": 0
+        }
+      ]
+    },
+    {
+      "id": "eda-async",
+      "title": "NO WAITING IN LINE",
+      "narration": "Because the producer does not wait for every consumer, it can answer the user quickly while other work happens later.",
+      "board": "paper",
+      "layout": "sequence",
+      "motion": "reveal",
+      "durationInFrames": 314,
+      "visual": {
+        "kind": "flow",
+        "label": "ASYNC WORK",
+        "nodes": [
+          "PLACE ORDER",
+          "DROP OFF EVENT",
+          "KEEP WORKING"
+        ],
+        "caption": "The sender moves on; consumers catch up in their own time."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "PLACE ORDER",
+          "speaker": "rick"
+        },
+        {
+          "frame": 55,
+          "action": "draw",
+          "text": "DROP OFF EVENT",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 110,
+          "action": "emphasis",
+          "text": "ANSWER FAST",
+          "speaker": "rick"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "rick",
+          "text": "The order service drops off the event, then answers the user.",
+          "startFrame": 0,
+          "endFrame": 108,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "While email and inventory do their chores later?",
+          "startFrame": 112,
+          "endFrame": 188,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "rick",
+          "text": "Async work. Less waiting, fewer services blocking each other.",
+          "startFrame": 192,
+          "endFrame": 310,
+          "pauseAfterMs": 0
+        }
+      ]
+    },
+    {
+      "id": "eda-retry",
+      "title": "MESSAGES CAN COME BACK",
+      "narration": "Distributed systems retry messages, so consumers must safely handle the same event more than once.",
+      "board": "lesson",
+      "layout": "stage",
+      "motion": "reveal",
+      "durationInFrames": 346,
+      "visual": {
+        "kind": "codebase",
+        "label": "RETRY WITHOUT DUPLICATES",
+        "files": [
+          "event-id: 42",
+          "retry: 2",
+          "handled: true"
+        ],
+        "code": [
+          "if (!seen(id))",
+          "  handle(event)",
+          "markSeen(id)"
+        ],
+        "caption": "Retries are normal; duplicate side effects are not."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "DELIVERY CAN FAIL",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 55,
+          "action": "draw",
+          "text": "TRY AGAIN",
+          "speaker": "rick"
+        },
+        {
+          "frame": 110,
+          "action": "emphasis",
+          "text": "HANDLE SAFELY",
+          "speaker": "stewie"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "stewie",
+          "text": "What if the consumer crashes after charging the card?",
+          "startFrame": 0,
+          "endFrame": 92,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "rick",
+          "text": "The broker retries the event. The consumer checks its event ID first.",
+          "startFrame": 95,
+          "endFrame": 243,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "So the message may repeat, but the charge must not.",
+          "startFrame": 247,
+          "endFrame": 342,
+          "pauseAfterMs": 0
+        }
+      ]
+    },
+    {
+      "id": "eda-tradeoff",
+      "title": "THE TRADE-OFF",
+      "narration": "Event-driven systems improve resilience and independence, but the latest state may arrive a little later.",
+      "board": "editorial",
+      "layout": "sequence",
+      "motion": "reveal",
+      "durationInFrames": 334,
+      "visual": {
+        "kind": "flow",
+        "label": "POWER WITH A SMALL CATCH",
+        "nodes": [
+          "INDEPENDENT",
+          "RESILIENT",
+          "EVENTUALLY CONSISTENT"
+        ],
+        "caption": "You gain flexibility, but not every screen updates at the same instant."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "SERVICES STAY INDEPENDENT",
+          "speaker": "rick"
+        },
+        {
+          "frame": 55,
+          "action": "draw",
+          "text": "FAILURES STAY LOCAL",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 110,
+          "action": "emphasis",
+          "text": "STATE CATCHES UP",
+          "speaker": "rick"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "rick",
+          "text": "The good news: services stay independent and failures stay local.",
+          "startFrame": 0,
+          "endFrame": 118,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "The catch: every screen may not update this exact millisecond.",
+          "startFrame": 122,
+          "endFrame": 233,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "rick",
+          "text": "That is eventual consistency. The system catches up.",
+          "startFrame": 236,
+          "endFrame": 330,
+          "pauseAfterMs": 0
+        }
+      ]
+    },
+    {
+      "id": "eda-recipe",
+      "title": "THE ELI5 RECIPE",
+      "narration": "Use event-driven architecture when one fact should trigger several independent reactions and a little delay is acceptable.",
+      "board": "paper",
+      "layout": "stage",
+      "motion": "reveal",
+      "durationInFrames": 393,
+      "visual": {
+        "kind": "pipeline",
+        "label": "THE EVENT-DRIVEN RECIPE",
+        "nodes": [
+          "PRODUCER",
+          "EVENT",
+          "BROKER",
+          "CONSUMERS"
+        ],
+        "caption": "Emit the fact, store the note, let each service react."
+      },
+      "beats": [
+        {
+          "frame": 0,
+          "action": "reveal",
+          "text": "EMIT THE FACT",
+          "speaker": "rick"
+        },
+        {
+          "frame": 50,
+          "action": "draw",
+          "text": "STORE THE NOTE",
+          "speaker": "stewie"
+        },
+        {
+          "frame": 100,
+          "action": "emphasis",
+          "text": "LET SERVICES REACT",
+          "speaker": "rick"
+        },
+        {
+          "frame": 145,
+          "action": "pop",
+          "text": "NO SIX-WAY PHONE CALL",
+          "speaker": "stewie"
+        }
+      ],
+      "characters": [
+        {
+          "assetId": "character-narrator-v1",
+          "speaker": "rick",
+          "x": 0.04,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        },
+        {
+          "assetId": "character-skeptic-v1",
+          "speaker": "stewie",
+          "x": 0.69,
+          "y": 0.52,
+          "width": 0.31,
+          "height": 0.26,
+          "entranceFrame": 0,
+          "zIndex": 4
+        }
+      ],
+      "dialogue": [
+        {
+          "speaker": "rick",
+          "text": "Emit the fact. Store the note. Let each service react.",
+          "startFrame": 0,
+          "endFrame": 110,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "Use it when many things should react independently.",
+          "startFrame": 113,
+          "endFrame": 197,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "rick",
+          "text": "Event-driven architecture: less phone tag, more useful receipts.",
+          "startFrame": 200,
+          "endFrame": 326,
+          "pauseAfterMs": 140
+        },
+        {
+          "speaker": "stewie",
+          "text": "I hate that this makes sense.",
+          "startFrame": 329,
+          "endFrame": 390,
+          "pauseAfterMs": 0
+        }
+      ]
+    }
+  ]
+}
