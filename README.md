@@ -33,18 +33,14 @@ The examples below are checked-in renders, so they work offline and stay next to
     <td width="50%" valign="top">
       <h3>EDA · Event-driven architecture</h3>
       <p>Explains events, brokers, async work, retries, and trade-offs through a compact 9:16 educational story.</p>
-      <video controls preload="metadata" width="100%" src="./out/eda-reels.mp4">
-        Your browser cannot play this video. <a href="./out/eda-reels.mp4">Download the EDA example</a>.
-      </video>
-      <p><a href="./out/eda-reels.mp4">Open the EDA render ↗</a> · <a href="./videos/eda/video.json"><code>videos/eda/video.json</code></a></p>
+      <a href="./out/eda-reels.mp4"><img src="./assets/readme/eda-thumbnail.png" alt="Still frame from the EDA event-driven architecture video" width="100%" /></a>
+      <p><a href="./out/eda-reels.mp4">▶ Play / open the EDA video ↗</a><br />· <a href="./videos/eda/video.json"><code>videos/eda/video.json</code></a></p>
     </td>
     <td width="50%" valign="top">
       <h3>MindKraft · Product walkthrough</h3>
       <p>Uses browser-style frames to tell the story of a clearer job-search workflow, from problem to next step.</p>
-      <video controls preload="metadata" width="100%" src="./out/mindkraft-explainer-reels.mp4">
-        Your browser cannot play this video. <a href="./out/mindkraft-explainer-reels.mp4">Download the MindKraft example</a>.
-      </video>
-      <p><a href="./out/mindkraft-explainer-reels.mp4">Open the MindKraft render ↗</a> · <a href="./videos/mindkraft-explainer/video.json"><code>videos/mindkraft-explainer/video.json</code></a></p>
+      <a href="./out/mindkraft-explainer-reels.mp4"><img src="./assets/readme/mindkraft-thumbnail.png" alt="Still frame from the MindKraft product walkthrough video" width="100%" /></a>
+      <p><a href="./out/mindkraft-explainer-reels.mp4">▶ Play / open the MindKraft video ↗</a><br />· <a href="./videos/mindkraft-explainer/video.json"><code>videos/mindkraft-explainer/video.json</code></a></p>
     </td>
   </tr>
 </table>
